@@ -1,95 +1,101 @@
-# 📊 Sales Data Analysis using Python
+# 📊 Sales Data Cleaning & Exploratory Data Analysis (EDA)
 
-This project was completed as **Week 1** of the **Vortex Tech Data Science & Analytics Internship Program 2026**.
+This project was completed as **Week 1 Task** of the **Vortex Tech Data Science & Analytics Internship 2026**.
 
-The objective was to clean a real-world sales dataset, perform exploratory data analysis (EDA), and create meaningful visualizations to uncover business insights.
+The objective was to clean a real-world sales dataset, perform Exploratory Data Analysis (EDA), and create visualizations to identify business trends and insights.
 
 ---
 
 ## 📌 Project Overview
 
-The project includes:
+The dataset contains **1,000 sales records** with a combination of **numeric** and **categorical** features.
 
-- Data cleaning and preprocessing
-- Handling missing values
-- Removing duplicate records
-- Converting incorrect data types
+The project focuses on:
+
+- Data Cleaning
+- Handling Missing Values
+- Removing Duplicate Records
+- Correcting Data Types
 - Exploratory Data Analysis (EDA)
-- Data visualization using Matplotlib
-- Business insights from sales data
-
-The dataset contains **1,000+ sales records** with a mix of numeric and categorical features.
+- Business Insights
+- Data Visualization
 
 ---
 
-## 🛠 Technologies Used
+## 📂 Dataset Information
 
-- Python
-- Pandas
-- Matplotlib
-- Jupyter Notebook
+- **Rows:** 1,000
+- **Columns:** 8
 
----
+### Features
 
-## 📂 Dataset Features
-
-The dataset contains the following columns:
-
-- Order ID
-- Order Date
+- Order_Date
 - Region
 - Category
 - Sales
-- Customer Age
-- Payment Method
-- Customer Satisfaction
+- Customer_Age
+- Gender
+- Payment_Method
+- Customer_Segment
 
 ---
 
-## 🧹 Data Cleaning Performed
+## 🧹 Data Cleaning
+
+The following preprocessing steps were performed:
 
 - Removed duplicate records
-- Handled missing values
-- Converted **Order_Date** to datetime format
+- Converted `Order_Date` to DateTime format
+- Filled missing values in **Region** with `"Unknown"`
 - Converted **Sales** to numeric values
-- Replaced invalid Customer Age values
-- Filled missing categorical values (Region and Payment Method)
+- Replaced invalid values using **NumPy (`np.nan`)**
+- Filled missing Sales values using the **mean**
+- Filled missing Customer Age using the **median**
+- Converted Customer Age back to integer
+- Filled missing Payment Method values with `"Unknown"`
 
 ---
 
 ## 📈 Visualizations
 
-This project includes the following visualizations:
+The project includes **5 business-focused visualizations**:
 
-1. Sales by Category (Bar Chart)
-2. Sales by Region (Bar Chart)
-3. Payment Method Distribution (Bar Chart)
-4. Customer Satisfaction Distribution (Bar Chart)
-5. Sales Distribution (Histogram)
-
-Each visualization includes a brief explanation and business insight.
+1. Sales by Category
+2. Sales by Region
+3. Orders by Payment Method
+4. Monthly Sales Trend
+5. Sales Distribution
 
 ---
 
-## 📊 Key Insights
+## 💡 Key Insights
 
-- Electronics generated the highest total sales.
-- Wallet is the most preferred payment method.
-- Sales are distributed across different ranges, with a slight concentration around the mid-sales range.
-- Customer satisfaction ratings indicate generally positive customer experiences.
-- Sales performance varies across different regions.
+- 👕 **Clothing generated the highest total sales** among all product categories.
+- 🌍 Sales were distributed across all four regions, with noticeable regional differences in revenue.
+- 💳 **Wallet** was the most preferred payment method, followed closely by Card payments.
+- 📅 Monthly sales fluctuated throughout the year, with higher sales observed during the later months.
+- 📊 Sales values were spread across the dataset, indicating a healthy mix of low-, medium-, and high-value orders.
 
 ---
 
-## 📁 Repository Structure
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+
+---
+
+## 📁 Project Structure
 
 ```
-├── week1.ipynb
 ├── sales_dataset.csv
+├── Week1.ipynb
 ├── sales_by_category.pdf
-├── sales_by_region.pdf
-├── payment_method.pdf
-├── customer_satisfaction.pdf
+├── region_sale.pdf
+├── orders_by_payment_method.pdf
+├── monthly_sales_trend.pdf
 ├── sales_distribution.pdf
 └── README.md
 ```
@@ -104,25 +110,32 @@ Each visualization includes a brief explanation and business insight.
 git clone https://github.com/yourusername/vortextech-datasci-week1.git
 ```
 
-2. Navigate to the project folder
+2. Install the required libraries
 
 ```bash
-cd vortextech-datasci-week1
+pip install pandas numpy matplotlib
 ```
 
-3. Install the required libraries
+3. Open the notebook
 
 ```bash
-pip install pandas matplotlib
+jupyter notebook Week1.ipynb
 ```
 
-4. Open the notebook
+4. Run all cells to reproduce the analysis and visualizations.
 
-```bash
-jupyter notebook week1.ipynb
-```
+---
 
-Run all cells to reproduce the analysis and visualizations.
+## 🎯 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Data Cleaning
+- Missing Value Handling
+- Data Type Conversion
+- Exploratory Data Analysis (EDA)
+- Business Data Visualization
+- Extracting Actionable Insights using Python
 
 ---
 
@@ -130,7 +143,8 @@ Run all cells to reproduce the analysis and visualizations.
 
 **Hammas Akhtar**
 
-Data Science & Analytics Intern (Vortex Tech 2026)
+Data Science & Analytics Intern — Vortex Tech 2026
 
-- GitHub: https://github.com/Hammas-Akhtar
-- LinkedIn: https://linkedin.com/in/hammas-akhtar
+GitHub: https://github.com/Hammas-Akhtar
+
+LinkedIn: https://www.linkedin.com/in/hammas-akhtar/
